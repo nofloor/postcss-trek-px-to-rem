@@ -1,4 +1,4 @@
-function trekPxToRem(options = defaults) {
+function trekPxToRem(options = {}) {
   return {
     postcssPlugin: 'postcss-trek-px-to-rem',
     Declaration(decl) {
