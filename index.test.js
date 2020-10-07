@@ -14,4 +14,8 @@ test('changes px units to rem', () => {
   decl.value = '12 80px 0 40px';
   trekPxToRem.Declaration(decl);
   expect(decl.value).toBe('12 5rem 0 2.5rem');
+  
+  decl.value = 'calc(100vh - 120px)';
+  trekPxToRem.Declaration(decl);
+  expect(decl.value).toBe('calc(100vh - 7.5rem)');
 });
